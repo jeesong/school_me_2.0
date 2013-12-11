@@ -5,7 +5,6 @@ class WelcomeController < ApplicationController
   def search
     zip = params[:search]
     state = zip.to_region(:state => true)
-    # state = params[:state]
     trulia_key = "7wb2jef2dwzyre26hf26vt9p"
     trulia_url = "http://api.trulia.com/webservices.php?library=TruliaStats&function=getZipCodeStats&zipCode=#{zip}&startDate=2013-12-01&endDate=2013-12-01&apikey=#{trulia_key}"
     trulia_result = Nokogiri::XML(open(trulia_url))
