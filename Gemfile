@@ -21,7 +21,9 @@ group :assets do
 end
 gem 'typhoeus'
 gem 'nokogiri'
-gem 'figaro'
+gem 'figaro' # for hiding api keys
+# gem 'geokit' # for getting the state off of zip code
+gem 'area'
 gem 'pry'
 
 gem 'jquery-rails'
