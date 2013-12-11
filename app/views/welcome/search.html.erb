@@ -1,5 +1,11 @@
-The search school page!<br>
-Median Listing: <%= @median_listing %><br>
-Average Listing: <%= @average_listing %><br>
-School Listing: <br>
-<%= @schools %>
+<strong>Median Listing</strong>: <%= @median_listing.to_i %><br>
+<strong>Average Listing</strong>: <%= @average_listing.to_i %><br><br>
+<strong>School Listing:</strong><br><br>
+<% for i in 0..@name.length-1 %>
+  <%= @name[i] %>, <%= @grade_range[i] %><br>
+  Address: <%= @address[i] %><br>
+  Phone: <%= @phone[i] %><br>
+  <%= @school_type[i].capitalize %> School<br><br>
+
+<% end %>
+

@@ -22,6 +22,7 @@ end
 gem 'typhoeus'
 gem 'nokogiri'
 gem 'figaro'
+gem 'pry'
 
 gem 'jquery-rails'
 
