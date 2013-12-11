@@ -1,11 +1,41 @@
 <strong>Median Listing</strong>: $<%= number_with_delimiter(@median_listing.to_i, :delimiter => ',') %><br>
 <strong>Average Listing</strong>: $<%= number_with_delimiter(@average_listing.to_i, :delimiter => ',') %><br><br>
-<strong>School Listing:</strong><br><br>
+<strong>Elementary Schools:</strong><br><br>
 <% for i in 0..@name.length-1 %>
-  <%= @name[i] %>, <%= @grade_range[i] %><br>
-  Address: <%= @address[i] %><br>
-  Phone: <%= @phone[i] %><br>
-  <%= @school_type[i].capitalize %> School<br><br>
-
+  <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
+     @grade_range[i] == "PK-6" || @grade_range[i] == "PK-5" %>
+    <%= @name[i] %><br>
+    Address: <%= @address[i] %><br>
+    Phone: <%= @phone[i] %><br>
+    <%= @school_type[i].capitalize %> School<br><br>
+  <% end %>
 <% end %>
-
+<strong>Middle Schools:</strong><br><br>
+<% for i in 0..@name.length-1 %>
+  <% if @grade_range[i] == "6-8" %>
+    <%= @name[i] %><br>
+    Address: <%= @address[i] %><br>
+    Phone: <%= @phone[i] %><br>
+    <%= @school_type[i].capitalize %> School<br><br>
+  <% end %>
+<% end %>
+<strong>High Schools:</strong><br><br>
+<% for i in 0..@name.length-1 %>
+  <% if @grade_range[i] == "9-12" %>
+    <%= @name[i] %><br>
+    Address: <%= @address[i] %><br>
+    Phone: <%= @phone[i] %><br>
+    <%= @school_type[i].capitalize %> School<br><br>
+  <% end %>
+<% end %>
+<strong>Other:</strong><br><br>
+<% for i in 0..@name.length-1 %>
+  <% if @grade_range[i] != "9-12" && @grade_range[i] != "6-8" &&
+     @grade_range[i] != "K-5" && @grade_range[i] != "K-6" &&
+     @grade_range[i] != "PK-5" && @grade_range[i] != "PK-6" %>
+    <%= @name[i] %>, <%= @grade_range[i] %><br>
+    Address: <%= @address[i] %><br>
+    Phone: <%= @phone[i] %><br>
+    <%= @school_type[i].capitalize %> School<br><br>
+  <% end %>
+<% end %>
