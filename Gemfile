@@ -18,6 +18,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'zurb-foundation'
 end
 gem 'typhoeus'
 gem 'nokogiri'
@@ -25,6 +26,7 @@ gem 'figaro' # for hiding api keys
 # gem 'geokit' # for getting the state off of zip code
 gem 'area'
 gem 'pry'
+gem 'gon'
 
 gem 'jquery-rails'
 

@@ -1,3 +1,26 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.left-content {
+  margin-left: 3px;
+  float: left;
+  height: 100%;
+  width: 320px;
+  position: absolute;
+  background: rgba(255,255,255,.9);
+  z-index: 2;
+  overflow:scroll;
+}
+
+#map {
+  position: relative;
+  bottom: p;
+  width: 100%;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  overflow:hidden;
+}

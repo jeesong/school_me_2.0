@@ -1,42 +1,63 @@
-<strong>Median Listing</strong>: $<%= number_with_delimiter(@median_listing.to_i, :delimiter => ',') %><br>
-<strong>Average Listing</strong>: $<%= number_with_delimiter(@average_listing.to_i, :delimiter => ',') %><br><br>
-<strong>Elementary Schools:</strong><br><br>
-<% for i in 0..@name.length-1 %>
-  <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
-     @grade_range[i] == "PK-6" || @grade_range[i] == "PK-5" %>
-    <%= @name[i] %><br>
-    Address: <%= @address[i] %><br>
-    Phone: <%= @phone[i] %><br>
-    <%= @school_type[i].capitalize %> School<br><br>
+
+<nav class="top-bar">
+  <ul class="title-area" >
+    <!-- Title Area -->
+    <li class="name">
+      <h1 id="title">
+        <a>
+          SchoolME
+        </a>
+      </h1>
+    </li>
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+</nav>
+
+<div class="left-content">
+  <strong>Median Listing</strong>: $<%= number_with_delimiter(@median_listing.to_i, :delimiter => ',') %><br>
+  <strong>Average Listing</strong>: $<%= number_with_delimiter(@average_listing.to_i, :delimiter => ',') %><br><br>
+  <strong>Elementary Schools:</strong><br><br>
+  <% for i in 0..@name.length-1 %>
+    <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
+       @grade_range[i] == "PK-6" || @grade_range[i] == "PK-5" %>
+      <%= @name[i] %><br>
+      Address: <%= @address[i] %><br>
+      Phone: <%= @phone[i] %><br>
+      <%= @school_type[i].capitalize %> School<br><br>
+    <% end %>
   <% end %>
-<% end %>
-<strong>Middle Schools:</strong><br><br>
-<% for i in 0..@name.length-1 %>
-  <% if @grade_range[i] == "6-8" || @grade_range[i] == "7-8" %>
-    <%= @name[i] %><br>
-    Address: <%= @address[i] %><br>
-    Phone: <%= @phone[i] %><br>
-    <%= @school_type[i].capitalize %> School<br><br>
+  <strong>Middle Schools:</strong><br><br>
+  <% for i in 0..@name.length-1 %>
+    <% if @grade_range[i] == "6-8" || @grade_range[i] == "7-8" %>
+      <%= @name[i] %><br>
+      Address: <%= @address[i] %><br>
+      Phone: <%= @phone[i] %><br>
+      <%= @school_type[i].capitalize %> School<br><br>
+    <% end %>
   <% end %>
-<% end %>
-<strong>High Schools:</strong><br><br>
-<% for i in 0..@name.length-1 %>
-  <% if @grade_range[i] == "9-12" %>
-    <%= @name[i] %><br>
-    Address: <%= @address[i] %><br>
-    Phone: <%= @phone[i] %><br>
-    <%= @school_type[i].capitalize %> School<br><br>
+  <strong>High Schools:</strong><br><br>
+  <% for i in 0..@name.length-1 %>
+    <% if @grade_range[i] == "9-12" %>
+      <%= @name[i] %><br>
+      Address: <%= @address[i] %><br>
+      Phone: <%= @phone[i] %><br>
+      <%= @school_type[i].capitalize %> School<br><br>
+    <% end %>
   <% end %>
-<% end %>
-<strong>Other:</strong><br><br>
-<% for i in 0..@name.length-1 %>
-  <% if @grade_range[i] != "9-12" && @grade_range[i] != "6-8" &&
-     @grade_range[i] != "K-5" && @grade_range[i] != "K-6" &&
-     @grade_range[i] != "PK-5" && @grade_range[i] != "PK-6" &&
-     @grade_range[i] != "7-8" %>
-    <%= @name[i] %>, <%= @grade_range[i] %><br>
-    Address: <%= @address[i] %><br>
-    Phone: <%= @phone[i] %><br>
-    <%= @school_type[i].capitalize %> School<br><br>
+  <strong>Other:</strong><br><br>
+  <% for i in 0..@name.length-1 %>
+    <% if @grade_range[i] != "9-12" && @grade_range[i] != "6-8" &&
+       @grade_range[i] != "K-5" && @grade_range[i] != "K-6" &&
+       @grade_range[i] != "PK-5" && @grade_range[i] != "PK-6" &&
+       @grade_range[i] != "7-8" %>
+      <%= @name[i] %>, <%= @grade_range[i] %><br>
+      Address: <%= @address[i] %><br>
+      Phone: <%= @phone[i] %><br>
+      <%= @school_type[i].capitalize %> School<br><br>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
+<div id="map"></div>
+
+
