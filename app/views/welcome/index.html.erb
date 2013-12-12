@@ -1,13 +1,19 @@
 Please enter a zip code or street address to look up schools in that area.
-<form method="get" action="/search">
-  <select name="search_by">
-    <option value="zip">ZIP</option>
-    <option value="street">Street</option>
-  </select>
-  <input type="text" name="search">
-  <button>Search</button>
-</form>
-
+<div class="row">
+  <form method="get" action="/search">
+    <div class="large-1 columns">
+      <select name="search_by">
+        <option value="zip">ZIP</option>
+        <option value="street">Street</option>
+      </select>
+    </div>
+    <div class="large-2 columns">
+      <input type="text" name="search">
+    </div>
+    <div class="large-1 columns">
+      <button>Search</button>
+    </div>
+  </form>
+</div>
 <h4>About</h4>
-
 <p>Created by Jee Song</p>
