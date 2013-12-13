@@ -29,6 +29,8 @@ class WelcomeController < ApplicationController
     @long = []
     gon.long = []
     @gsid = []
+    @ncesid = []
+    gon.ncesid = []
     @state = []
     @school_type = []
     gon.school_type = []
@@ -58,6 +60,8 @@ class WelcomeController < ApplicationController
         @grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
         @enrollment << greatschool_result.xpath("/schools/school[#{i}]/enrollment").text
         @district << greatschool_result.xpath("/schools/school[#{i}]/district").text
+        @ncesid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
+        gon.ncesid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
       end
     end
 

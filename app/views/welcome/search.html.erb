@@ -17,7 +17,7 @@
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
        @grade_range[i] == "PK-6" || @grade_range[i] == "PK-5" %>
-      &nbsp&nbsp<%= @name[i] %>
+      &nbsp&nbsp<a id='<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>
       <% if @rating[i] == "" %>
         <br><br>
       <% else %>
@@ -28,7 +28,7 @@
   <strong>Middle Schools:</strong><br><br>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "6-8" || @grade_range[i] == "7-8" %>
-      &nbsp&nbsp<%= @name[i] %>
+      &nbsp&nbsp<a id='<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>
       <% if @rating[i] == "" %>
         <br><br>
       <% else %>
@@ -39,7 +39,7 @@
   <strong>High Schools:</strong><br><br>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "9-12" %>
-      &nbsp&nbsp<%= @name[i] %>
+      &nbsp&nbsp<a id='<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>
       <% if @rating[i] == "" %>
         <br><br>
       <% else %>
@@ -53,7 +53,7 @@
        @grade_range[i] != "K-5" && @grade_range[i] != "K-6" &&
        @grade_range[i] != "PK-5" && @grade_range[i] != "PK-6" &&
        @grade_range[i] != "7-8" %>
-      &nbsp&nbsp<%= @name[i] %>, <%= @grade_range[i] %>
+      &nbsp&nbsp<a id='<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>, <%= @grade_range[i] %>
       <% if @rating[i] == "" %>
         <br><br>
       <% else %>
