@@ -4,8 +4,8 @@
 if ("#map").length > 0
   $ ->
     map = L.map("map").setView([gon.set_lat, gon.set_long], 13);
-    L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png",
-      attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors"
+    L.tileLayer("http://{s}.tile.cloudmade.com/628dba99fedb4efab19b7c389cbffc90/998/256/{z}/{x}/{y}.png",
+      attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors, Imagery © <a href=\"http://cloudmade.com\">CloudMade</a>"
     ).addTo map
     i = 0
     while i < gon.lat.length
