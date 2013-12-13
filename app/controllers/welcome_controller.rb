@@ -18,14 +18,20 @@ class WelcomeController < ApplicationController
     greatschool_result = Nokogiri::XML(open(greatschool_url))
 
     @name = []
+    gon.school_name = []
     @address = []
+    gon.school_address = []
     @phone = []
+    gon.phone = []
     @rating = []
     @lat = []
+    gon.lat = []
     @long = []
+    gon.long = []
     @gsid = []
     @state = []
     @school_type = []
+    gon.school_type = []
     @grade_range = []
     @enrollment = []
     @district = []
@@ -35,14 +41,20 @@ class WelcomeController < ApplicationController
         break
       else
         @name << greatschool_result.xpath("/schools/school[#{i}]/name").text
+        gon.school_name << greatschool_result.xpath("/schools/school[#{i}]/name").text
         @address << greatschool_result.xpath("/schools/school[#{i}]/address").text
+        gon.school_address << greatschool_result.xpath("/schools/school[#{i}]/address").text
         @phone << greatschool_result.xpath("/schools/school[#{i}]/phone").text
+        gon.phone << greatschool_result.xpath("/schools/school[#{i}]/phone").text
         @rating << greatschool_result.xpath("/schools/school[#{i}]/gsRating").text
         @lat << greatschool_result.xpath("/schools/school[#{i}]/lat").text
+        gon.lat << greatschool_result.xpath("/schools/school[#{i}]/lat").text
         @long << greatschool_result.xpath("/schools/school[#{i}]/lon").text
+        gon.long << greatschool_result.xpath("/schools/school[#{i}]/lon").text
         @gsid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
         @state << state
         @school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
+        gon.school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
         @grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
         @enrollment << greatschool_result.xpath("/schools/school[#{i}]/enrollment").text
         @district << greatschool_result.xpath("/schools/school[#{i}]/district").text

@@ -6,11 +6,13 @@
   margin-left: 3px;
   float: left;
   height: 100%;
-  width: 320px;
+  width: 27%;
   position: absolute;
   background: rgba(255,255,255,.9);
   z-index: 2;
   overflow:scroll;
+  overflow-x:scroll;
+  white-space:nowrap;
 }
 
 #map {
