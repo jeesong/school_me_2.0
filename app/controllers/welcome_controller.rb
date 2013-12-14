@@ -29,6 +29,7 @@ class WelcomeController < ApplicationController
     @long = []
     gon.long = []
     @gsid = []
+    gon.gsid = []
     @ncesid = []
     gon.ncesid = []
     @state = []
@@ -54,14 +55,13 @@ class WelcomeController < ApplicationController
         @long << greatschool_result.xpath("/schools/school[#{i}]/lon").text
         gon.long << greatschool_result.xpath("/schools/school[#{i}]/lon").text
         @gsid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
+        gon.gsid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
         @state << state
         @school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
         gon.school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
         @grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
         @enrollment << greatschool_result.xpath("/schools/school[#{i}]/enrollment").text
         @district << greatschool_result.xpath("/schools/school[#{i}]/district").text
-        @ncesid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
-        gon.ncesid << greatschool_result.xpath("/schools/school[#{i}]/gsId").text
       end
     end
 
