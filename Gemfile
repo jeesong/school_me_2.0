@@ -27,6 +27,7 @@ gem 'figaro' # for hiding api keys
 gem 'area'
 gem 'pry'
 gem 'gon'
+gem 'font-awesome-sass'
 
 gem 'jquery-rails'
 

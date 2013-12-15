@@ -36,6 +36,7 @@ class WelcomeController < ApplicationController
     @school_type = []
     gon.school_type = []
     @grade_range = []
+    gon.grade_range = []
     @enrollment = []
     @district = []
 
@@ -60,6 +61,7 @@ class WelcomeController < ApplicationController
         @school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
         gon.school_type << greatschool_result.xpath("/schools/school[#{i}]/type").text
         @grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
+        gon.grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
         @enrollment << greatschool_result.xpath("/schools/school[#{i}]/enrollment").text
         @district << greatschool_result.xpath("/schools/school[#{i}]/district").text
       end

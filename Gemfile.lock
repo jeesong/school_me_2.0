@@ -50,6 +50,8 @@ GEM
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
+    font-awesome-sass (4.0.2)
+      sass-rails (>= 3.1.1)
     gon (4.1.1)
       actionpack (>= 2.3.0)
       json
@@ -132,6 +134,7 @@ DEPENDENCIES
   area
   coffee-rails (~> 3.2.1)
   figaro
+  font-awesome-sass
   gon
   jquery-rails
   nokogiri
