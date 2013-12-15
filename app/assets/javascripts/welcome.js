@@ -1,5 +1,7 @@
 if ("#map".length > 0) {
   $(function() {
+
+    // Initializing the map
     var map, marker;
     map = L.map("map").setView([gon.set_lat, gon.set_long], 14);
     L.tileLayer("http://{s}.tile.cloudmade.com/628dba99fedb4efab19b7c389cbffc90/998/256/{z}/{x}/{y}.png", {
@@ -8,35 +10,7 @@ if ("#map".length > 0) {
 
     var markerArray = []
 
-    // var assignIcon = function(type, grade_range) {
-    //   if (type == "public") {
-    //     switch (grade_range) {
-    //       case "K-6" || "PK-6":
-    //         return "public elementary"
-    //         // return icon.publicElementary;
-    //       case "7-8":
-    //         return "public middle school"
-    //         // return icon.publicMiddle;
-    //       case "9-12":
-    //         return "public high school"
-    //         // return icon.publicHigh;
-    //     }
-    //   }
-    //   else {
-    //     switch (grade_range) {
-    //       case "K-6" || "PK-6":
-    //         return "private elementary"
-    //         // return icon.privateElementary;
-    //       case "7-8":
-    //         return "private middle"
-    //         // return icon.privateMiddle;
-    //       case "9-12":
-    //         return "private high"
-    //         // return icon.privateHigh;
-    //     }
-    //   }
-    // };
-
+    // Assigning icon for type of school on the map
     var assignIcon = function(type, grade_range) {
       if (type == "public") {
         if (grade_range == "K-6" || grade_range == "PK-6" || grade_range == "K-5" || grade_range == "PK-5" || grade_range == "K-4" || grade_range == "5-6") {
@@ -67,10 +41,13 @@ if ("#map".length > 0) {
         }
       }
     };
+
+    // Assigning each school an icon & placing on the map
+    // Push marker into markerArray in orer to interact with
+    // openPopup when a school is selected from the list
     for (var i = 0; i < gon.lat.length; i++) {
       marker = L.marker([gon.lat[i], gon.long[i]], {
         title: gon.gsid[i],
-        // icon: icon.publicElementary
         icon: assignIcon(gon.school_type[i], gon.grade_range[i])
       }).bindPopup("<b>" + gon.school_name[i] + "</b>" + " (" + gon.school_type[i] + ")" + "<br>" + gon.phone[i] + "<br>" + gon.school_address[i]).addTo(map);
       markerArray.push(marker);
@@ -148,12 +125,12 @@ icon.privateHigh = L.AwesomeMarkers.icon({
 icon.otherPublic = L.AwesomeMarkers.icon({
   icon: 'circle',
   iconColor: 'white',
-  markerColor:'purple',
+  markerColor:'darkpurple',
   prefix: 'fa'
 });
 icon.otherPrivate = L.AwesomeMarkers.icon({
   icon: 'circle',
   iconColor: 'black',
-  markerColor:'purple',
+  markerColor:'darkpurple',
   prefix: 'fa'
 });

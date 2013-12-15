@@ -1,19 +1,72 @@
-Please enter a zip code or street address to look up schools in that area.
+<div class="homepage">
 <div class="row">
-  <form method="get" action="/search">
-    <div class="large-1 columns">
-      <select name="search_by">
-        <option value="zip">ZIP</option>
-        <option value="street">Street</option>
-      </select>
-    </div>
-    <div class="large-2 columns">
-      <input type="text" name="search">
-    </div>
-    <div class="large-1 columns">
-      <button>Search</button>
-    </div>
-  </form>
+  <div class="large-12">
+    <h1 id="mainTitle">SchoolMe</h1>
+  </div>
 </div>
-<h4>About</h4>
-<p>Created by Jee Song</p>
+<div class="row">
+  <div class="large-12">
+    <form method="get" action="/search">
+      <input type="text" name="search" placeholder="Enter Zip Here">
+    </form>
+  </div>
+</div>
+<div class="row">
+  <!-- <div class="large-2 columns"></div> -->
+  <div class="large-4 columns" id="homeKey">
+    <h5>Map Key</h5><br>
+    <table>
+      <tr>
+        <th style="background-color:#34282C" width="120"><font color="white">Symbol</th>
+        <th style="background-color:#34282C" width="170"><font color="white">Type</th>
+      </tr>
+      <tr>
+        <td style="text-align:center"><i class="fa fa-circle-o"></i></td>
+        <td>Public</td>
+      </tr>
+      <tr>
+        <td style="text-align:center"><i class="fa fa-circle"></i></td>
+        <td>Private</td>
+      </tr>
+      <tr>
+        <th style="background-color:#34282C" width="120"><font color="white">Color</th>
+        <th style="background-color:#34282C" width="170"><font color="white">Grade Level</th>
+      </tr>
+      <tr>
+        <td style="background-color:#C00000"></td>
+        <td>Elementary</td>
+      </tr>
+      <tr>
+        <td style="background-color:#65cc00"></td>
+        <td>Middle</td>
+      </tr>
+      <tr>
+        <td style="background-color:#3298ff"></td>
+        <td>High</td>
+      </tr>
+      <tr>
+        <td style="background-color:#471947"></td>
+        <td>Other</td>
+      </tr>
+
+    </table>
+  </div>
+  <div class="large-8 columns" id="homeDesc">
+    <h4>About SchoolMe</h4>
+    <p>Many families are left in the dark about the performance of
+       their child’s school, often times not even aware of the
+       schools available in the neighborhood. SchoolMe is built to
+       help families have a better understanding of the options that
+       are available to them in deciding which school to send their
+       kids to.</p>
+    <h5>Using the Site</h5>
+    <p>Please enter the zip code in the field above to look up schools
+       in your neighborhood.</p>
+    <p>Schools are organized by grade level (Elementary, Middle,
+       High, Other) and are given a rating on a scale of 1-10. The
+       rating comes courtesy of GreatSchools, and are calculated by
+       comparing the school’s state standardized test results to
+       those of other schools in the state.</p>
+  </div>
+</div>
+</div>

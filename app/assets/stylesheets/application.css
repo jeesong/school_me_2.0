@@ -13,3 +13,24 @@
  *= require_tree .
  *= require font-awesome
  */
+
+#mainTitle {
+  font-size: 10em;
+  text-align: center;
+  color: white;
+  background-image:url('chalkboard.jpg');
+  height: 300px;
+  line-height: 250px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: DarkGreen;
+  border-radius: 4px;
+}
+
+#mapKey {
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+
