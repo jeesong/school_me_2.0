@@ -8,6 +8,7 @@ if ("#map".length > 0) {
       attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors, Imagery © <a href=\"http://cloudmade.com\">CloudMade</a>"
     }).addTo(map);
 
+    // Array created to push all of the schools
     var markerArray = []
 
     // Assigning icon for type of school on the map
@@ -86,6 +87,7 @@ if ("#map".length > 0) {
 
 var icon = {}
 
+// Using Awesome Markers to create icons for school categories
 icon.publicElementary = L.AwesomeMarkers.icon({
   icon: 'circle',
   iconColor: 'white',

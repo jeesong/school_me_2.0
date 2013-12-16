@@ -21,9 +21,14 @@ $('form').submit(function(event) {
   var zipPattern = /^\d{5}$/;
   var $zip = $('#getZip').val();
   if (zipPattern.test($zip) == false) {
-    $('#getZip').addClass("error");
-    $('#getZipForm').prepend('<label class="error">Error</label>')
-    $('#getZipForm').append('<small class="error">Please Enter a Valid 5-Digit ZIP</small>');
-    event.preventDefault();
+    if ($('#getZip').hasClass("error") != true) {
+      $('#getZip').addClass("error");
+      $('#getZipForm').prepend('<label class="error">Error</label>')
+      $('#getZipForm').append('<small class="error">Please Enter a Valid 5-Digit ZIP</small>');
+      event.preventDefault();
+    }
+    else {
+      event.preventDefault();
+    }
   }
 })

@@ -14,23 +14,46 @@
  *= require font-awesome
  */
 
-#mainTitle {
-  font-size: 10em;
-  text-align: center;
-  color: white;
-  background-image:url('chalkboard.jpg');
+@font-face {
+  font-family: 'Archistico';
+  src: url('Archistico_Simple-webfont.eot');
+  src: url('Archistico_Simple-webfont.eot?#iefix') format('embedded-opentype'),
+       url('Archistico_Simple-webfont.woff') format('woff'),
+       url('Archistico_Simple-webfont.ttf') format('truetype'),
+       url('Archistico_Simple-webfont.svg#ArchisticoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#mainBillboard {
   height: 300px;
-  line-height: 250px;
+  background-image:url('chalkboard.jpg');
   border-style: solid;
   border-width: 4px;
   border-color: DarkGreen;
   border-radius: 4px;
+  margin: 15px;
+}
+
+#mainTitle {
+  font-family: 'Archistico';
+  font-size: 9em;
+  text-align: center;
+  color: white;
+}
+
+#mainAuthor {
+  font-size: 14px;
+  color: white;
+  float: right;
+  margin-top: 15px;
+  margin-right: 10px;
 }
 
 #mapKey {
   text-align: center;
 }
+
 input {
   text-align: center;
 }
-
