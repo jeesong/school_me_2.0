@@ -16,3 +16,15 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$('form').submit(function(event) {
+  var zipPattern = /^\d{5}$/;
+  var $zip = $('#getZip').val();
+  if (zipPattern.test($zip) == false) {
+    // alert("ENTER VALID ZIP");
+    $('#getZip').addClass("error");
+    $('#getZipForm').prepend('<label class="error">Error</label>')
+    $('#getZipForm').append('<small class="error">Please Enter a Valid 5-Digit ZIP</small>');
+    event.preventDefault();
+  }
+})
