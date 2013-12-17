@@ -90,7 +90,8 @@
   pointer-events: none;
   }
 .leaflet-top {
-  top: 0;
+  top: 40px;
+  position: fixed;
   }
 .leaflet-right {
   right: 0;
@@ -115,7 +116,7 @@
   margin-bottom: 10px;
   }
 .leaflet-left .leaflet-control {
-  margin-left: 360px;
+  margin-left: 330px;
   }
 .leaflet-right .leaflet-control {
   margin-right: 10px;

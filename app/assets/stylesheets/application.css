@@ -74,5 +74,9 @@ input {
   border-width: 1px;
 }
 
+#schoolType {
+  color: white;
+}
+
 /*  background: rgba(117,113,113,.9); */
 /* home page background:  background-color: #E8E8E8; */

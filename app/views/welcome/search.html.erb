@@ -24,7 +24,7 @@
 </div> <!-- ends div "fixed" -->
 
 <div class="left-content">
-  <strong>Elementary Schools:</strong><br><br>
+  <h5 id="schoolType">Elementary Schools:</h5>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
        @grade_range[i] == "PK-6" || @grade_range[i] == "PK-5" ||
@@ -37,7 +37,7 @@
       <% end %>
     <% end %>
   <% end %>
-  <strong>Middle Schools:</strong><br><br>
+  <h5 id="schoolType">Middle Schools:</h5>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "6-8" || @grade_range[i] == "7-8" %>
       &nbsp&nbsp<a id='<%= @gsid[i] %>,<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>
@@ -48,7 +48,7 @@
       <% end %>
     <% end %>
   <% end %>
-  <strong>High Schools:</strong><br><br>
+  <h5 id="schoolType">High Schools:</h5>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "9-12" %>
       &nbsp&nbsp<a id='<%= @gsid[i] %>,<%= @lat[i] %>,<%= @long[i]%>' class='school_list'><%= @name[i] %></a>
@@ -59,7 +59,7 @@
       <% end %>
     <% end %>
   <% end %>
-  <strong>Other:</strong><br><br>
+  <h5 id="schoolType">Other:</h5>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] != "9-12" && @grade_range[i] != "6-8" &&
        @grade_range[i] != "K-5" && @grade_range[i] != "K-6" &&
