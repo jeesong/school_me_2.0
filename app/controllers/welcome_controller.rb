@@ -24,7 +24,7 @@ class WelcomeController < ApplicationController
     gon.set_long= zip.to_lon
     trulia_url = "http://api.trulia.com/webservices.php?library=TruliaStats&function=getZipCodeStats&zipCode=#{zip}&startDate=2013-12-01&endDate=2013-12-01&apikey=#{ENV["TRULIA_API_KEY"]}"
 
-    trulia_result = Nokogiri::XML(open(trulia_url))
+    trulia_result = Nokogiri::XML(open(trulia_url, :read_timeout => 10))
     @median_listing = trulia_result.xpath("/TruliaWebServices/response/TruliaStats/listingStats/listingStat/listingPrice/subcategory[1]/medianListingPrice").text
     @average_listing = trulia_result.xpath("/TruliaWebServices/response/TruliaStats/listingStats/listingStat/listingPrice/subcategory[1]/averageListingPrice").text
 
@@ -54,7 +54,7 @@ class WelcomeController < ApplicationController
     greatschool_url = "http://api.greatschools.org/schools/nearby?key=#{ENV["GREATSCHOOLS_API_KEY"]}&state=#{state}&zip=#{zip}&radius=2"
 
     begin
-        greatschool_result = Nokogiri::XML(open(greatschool_url))
+        greatschool_result = Nokogiri::XML(open(greatschool_url, :read_timeout => 10))
         for i in 1..100
           if (greatschool_result.xpath("/schools/school[#{i}]").text).empty?
             break
