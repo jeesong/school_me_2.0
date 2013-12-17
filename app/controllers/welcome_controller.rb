@@ -54,7 +54,7 @@ class WelcomeController < ApplicationController
     greatschool_url = "http://api.greatschools.org/schools/nearby?key=#{ENV["GREATSCHOOLS_API_KEY"]}&state=#{state}&zip=#{zip}&radius=2"
 
     begin
-        greatschool_result = Nokogiri::XML(open(greatschool_url, :read_timeout => 10))
+        greatschool_result = Nokogiri::XML(open(greatschool_url, :read_timeout => 20))
         for i in 1..100
           if (greatschool_result.xpath("/schools/school[#{i}]").text).empty?
             break
