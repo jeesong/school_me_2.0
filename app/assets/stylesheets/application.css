@@ -52,7 +52,7 @@
 }
 
 #mapKey {
-  text-align: center;
+  padding: 5px;
 }
 
 input {
@@ -62,3 +62,17 @@ input {
 .dropdown li {
   text-align: center;
 }
+
+#mapKeyTitle {
+  text-align: center;
+  margin-bottom: -0.5em;
+}
+
+#homeDesc hr {
+  margin: 3px 20px 10px 0px;
+  border: solid DarkGreen;
+  border-width: 1px;
+}
+
+/*  background: rgba(117,113,113,.9); */
+/* home page background:  background-color: #E8E8E8; */

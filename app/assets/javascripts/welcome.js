@@ -4,7 +4,7 @@ if ("#map".length > 0) {
     // Initializing the map
     var map, marker;
     map = L.map("map").setView([gon.set_lat, gon.set_long], 14);
-    L.tileLayer("http://{s}.tile.cloudmade.com/628dba99fedb4efab19b7c389cbffc90/998/256/{z}/{x}/{y}.png", {
+    L.tileLayer("http://{s}.tile.cloudmade.com/628dba99fedb4efab19b7c389cbffc90/116757/256/{z}/{x}/{y}.png", {
       attribution: "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors, Imagery © <a href=\"http://cloudmade.com\">CloudMade</a>"
     }).addTo(map);
 
