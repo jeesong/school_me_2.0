@@ -32,7 +32,8 @@
   border-width: 4px;
   border-color: DarkGreen;
   border-radius: 4px;
-  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 #mainTitle {
@@ -55,5 +56,9 @@
 }
 
 input {
+  text-align: center;
+}
+
+.dropdown li {
   text-align: center;
 }

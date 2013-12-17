@@ -1,5 +1,6 @@
 SchoolMe20::Application.routes.draw do
   root to: "welcome#index"
+  get "/home", to: "welcome#index"
   get "/search", to: "welcome#search"
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,18 +1,29 @@
 <div class="fixed">
   <nav class="top-bar">
     <ul class="title-area" >
-      <!-- Title Area -->
       <li class="name">
-        <h1><a>SchoolME</a></h1>
+        <h1><a href="/home">SchoolME</a></h1>
       </li>
     </ul>
+    <section class="top-bar-section">
+      <ul class="right">
+        <li class="has-dropdown">
+          <a>+</a>
+          <ul class="dropdown">
+            <li><label>Search Nearby ZIP<label></li>
+            <% if @nearby_zip != nil %>
+              <% @nearby_zip.each do |zip| %>
+                <li><a href="/search?search=<%= zip %>"><%= zip %></a></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+    </section>
   </nav>
 </div>
 
 <div class="left-content">
-  <strong>Median Listing</strong>: $<%= number_with_delimiter(@median_listing.to_i, :delimiter => ',') %><br>
-  <strong>Average Listing</strong>: $<%= number_with_delimiter(@average_listing.to_i, :delimiter => ',') %>
-  <hr>
   <strong>Elementary Schools:</strong><br><br>
   <% for i in 0..@name.length-1 %>
     <% if @grade_range[i] == "K-6" || @grade_range[i] == "K-5" ||
@@ -62,6 +73,10 @@
       <% end %>
     <% end %>
   <% end %>
+  <hr>
+  <strong>Median Listing</strong>: $<%= number_with_delimiter(@median_listing.to_i, :delimiter => ',') %><br>
+  <strong>Average Listing</strong>: $<%= number_with_delimiter(@average_listing.to_i, :delimiter => ',') %>
+  <br><br>
 </div>
 
 <div id="map"></div>
