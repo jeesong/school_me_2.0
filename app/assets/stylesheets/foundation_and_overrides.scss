@@ -1012,7 +1012,7 @@ $header-bottom-margin: .1em;
 
 // We use these to control the style of the modal itself.
 
-// $reveal-modal-bg: #fff;
+$reveal-modal-bg: rgba(19, 18, 18, 0.75);
 // $reveal-position-top: 50px;
 // $reveal-default-width: 80%;
 // $reveal-modal-padding: em-calc(20);
@@ -1206,7 +1206,7 @@ $header-bottom-margin: .1em;
 // These are for controlling the display and margin of tables
 
 // $table-display: table-cell;
-// $table-margin-bottom: em-calc(20);
+$table-margin-bottom: 0;
 
 //
 // Image Thumbnail Variables
