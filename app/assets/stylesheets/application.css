@@ -35,20 +35,31 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
-
+#mainTagLine {
+  font-family: 'Amatic SC';
+  font-size: 1.3em;
+  color:white;
+  margin-left: 140px;
+}
 #mainTitle {
   font-family: 'Archistico';
   font-size: 9em;
   text-align: center;
   color: white;
+  margin-bottom:-0.25em;
 }
 
 #mainAuthor {
-  font-size: 14px;
+  font-family: 'Amatic SC';
+  font-size: 1.3em;
   color: white;
   float: right;
-  margin-top: 15px;
+  margin-top: 70px;
   margin-right: 10px;
+}
+
+#mainAuthor a {
+  font-size: 1.2em;
 }
 
 #mapKey {
@@ -76,6 +87,11 @@ input {
 
 #schoolType {
   color: white;
+  margin-left: 10px;
+}
+
+.school_list {
+  margin-left: 13px;
 }
 
 /*  background: rgba(117,113,113,.9); */

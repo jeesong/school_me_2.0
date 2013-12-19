@@ -79,6 +79,7 @@ class WelcomeController < ApplicationController
             gon.grade_range << greatschool_result.xpath("/schools/school[#{i}]/gradeRange").text
             @enrollment << greatschool_result.xpath("/schools/school[#{i}]/enrollment").text
             @district << greatschool_result.xpath("/schools/school[#{i}]/district").text
+            gon.ncesid << greatschool_result.xpath("/schools/school[#{i}]/ncesId").text
           end
         end
     rescue OpenURI::HTTPError

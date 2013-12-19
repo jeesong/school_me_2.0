@@ -47,10 +47,11 @@ if ("#map".length > 0) {
     // Push marker into markerArray in orer to interact with
     // openPopup when a school is selected from the list
     for (var i = 0; i < gon.lat.length; i++) {
+      var ncesURL = "http://nces.ed.gov/ccd/schoolsearch/school_detail.asp?Search=1&SchoolID=" + gon.ncesid[i] + "&SchoolType=1&SchoolType=2&SchoolType=3&SchoolType=4&SpecificSchlTypes=all&IncGrade=-1&LoGrade=-1&HiGrade=-1&ID=" + gon.ncesid[i]
       marker = L.marker([gon.lat[i], gon.long[i]], {
         title: gon.gsid[i],
         icon: assignIcon(gon.school_type[i], gon.grade_range[i])
-      }).bindPopup("<b>" + gon.school_name[i] + "</b>" + " (" + gon.school_type[i] + ")" + "<br>" + gon.phone[i] + "<br>" + gon.school_address[i]).addTo(map);
+      }).bindPopup('<a href=' + ncesURL + '>' + gon.school_name[i] + '</a>' + " (" + gon.school_type[i] + ")" + "<br>" + gon.phone[i] + "<br>" + gon.school_address[i]).addTo(map);
       markerArray.push(marker);
     }
 
